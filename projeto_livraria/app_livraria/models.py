@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Livro(models.Model):
+    id_livro = models.AutoField(primary_key=True)
+    nome = models.TextField(max_length=250)
+    idade = models.IntegerField()

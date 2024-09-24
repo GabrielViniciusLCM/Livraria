@@ -11,7 +11,22 @@
     <title>Livraria</title>
   </head>
   <body>
-    <h1>Boas vindas!</h1>
+    <nav style = "background-color: burlywood !important;" class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Livraria</span>
+        </div>
+    </nav>
+
+    <form action="{% url 'listagem_livros' %}" method = "post">
+        {% csrf_token %}
+        <div style = "text-align: center;" class ="container">
+            <h1>Boas vindas!</h1>
+            Nome <input name = "st_nome" class ="form-control-sm" type="text">
+            Idade <input name = "nu_idade" class = "form-control-sm" type="text">
+            <button class = "form-control-sm">Enviar</button>
+        </div>
+    </form>
+   
 
     <!-- Optional JavaScript; choose one of the two! -->
 

@@ -9,5 +9,5 @@ urlpatterns = [
     # livraria.com
     path('', views.home, name ='home'),
     # livraria.com/teste
-    # path('teste/')
+    path('livros/', views.livros, name = 'listagem_livros')
 ]
